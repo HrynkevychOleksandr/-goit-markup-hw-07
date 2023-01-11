@@ -173,6 +173,17 @@ a {
 .site-nav .link.current::after {
 	opacity: 1;
 }
+.header-button {
+	opacity: 0;
+	margin-left: auto;
+
+}
+	
+.header-svg {
+
+}
+
+
 /* cont-nav */
 .cont-nav {
 	margin-left: auto;
@@ -206,10 +217,16 @@ a {
 	.cont-nav {
 		display: none;
 	}
+	.header-button {
+		opacity: 1;
+	}
 }
 @media screen and (max-width: 1199px) {
 	.cont-nav .item + .item {
 	    margin-top: 4px;
+	}
+	.cont-nav > .item:first-child {
+		padding-top: 24px;
 	}
 
 }
@@ -257,15 +274,15 @@ a {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding-top: 192px;
-	padding-bottom: 192px;
+	padding-top: 112px;
+	padding-bottom: 112px;
 	text-align: center;
 }
 .hero-title {
-	margin: 0px auto 48px;
-	max-width: 492px;
-	font-size: 56px;
-	line-height: 1.07;
+	margin: 0px auto 72px;
+	max-width: 318px;
+	font-size: 36px;
+	line-height: 1.11;
 	color: var(--primery-white-color);
 }
 .hero-button {
@@ -332,11 +349,13 @@ a {
 }
 .modal {
 	position: absolute;
-	top: 50%;
+	/* top: 50%; */
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 0);
 	display: block;
-	min-width: 408px;
+	width: 392px;
+	margin-top: 96px;
+	/* min-width: 408px; */
 	min-height: 516px;
 	background-color: var();
 	background: var(--color-modal);
@@ -345,9 +364,9 @@ a {
 }
 .modal-form {
 	padding-top: 72px;
-	padding-right: 24px;
+	padding-right: 16px;
 	padding-bottom: 24px;
-	padding-left: 24px;
+	padding-left: 16px;
 }
 .modal-form-h2 {
 		font-style: normal;
@@ -508,6 +527,42 @@ a {
 	border: none;
 	border-radius: 4px;
 }
+
+@media screen and (min-width: 768px) {
+	.hero {
+		padding-bottom: 108px;
+	}
+	.hero-title {
+		margin-bottom: 40px;
+		max-width: 494px;
+		font-size: 56px;
+		line-height: 1.07;
+	}
+	.modal {
+		width: 408px;
+	}
+	.modal-form {
+		padding-right: 24px;
+		padding-left: 24px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+	.hero {
+		padding-top: 188px;
+		padding-bottom: 188px;
+	}
+	.hero-title {
+		margin-bottom: 48px;
+	}
+	.modal {
+		margin-top: 80px;
+	}
+
+}
+
+
 /* -------------------section one------------------- */
 .section-one,
 .section-three {
@@ -995,21 +1050,13 @@ a {
 		margin-right: auto;
 		margin-bottom: 72px;
 	}
-	.subscribe-label {
-		/* align-items: center; */
-		/* padding-left: auto;
-		padding-right: auto; */
+	.subscribe-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.subscribe-input {
 		margin-bottom: 16px;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: auto;
-		padding-right: auto;
-	}
-	.subscribe-submit {
-		margin-left: auto;
-		margin-right: auto;
 	}
 }
 
