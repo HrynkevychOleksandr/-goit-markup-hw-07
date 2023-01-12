@@ -44,13 +44,34 @@
 						<a href="tel:+110001111111" class="link-tel">+11 (000) 111-11-11</a>
 					</li>
 				</ul>
-				<button type="button" class="header-button">
-					<svg class="header-svg" width="32" height="22">
-						<!-- <use href="./images/icons.svg#icon-menu"></use> -->
-						<use href="./images/icons.svg#icon-close"></use>
-						<!-- <use href="./images/instagram 2.svg"></use> -->
+				<!-- ************ modal-menu icon************ -->
+				<button class="header-button-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+					<svg class="header-svg-open" width="32" height="22">
+						<use href="./images/icons.svg#icon-menu"></use>
 					</svg>
 				</button>
+			</div>
+			<!-- ************ modal-menu ************ -->
+			<!-- <div class="menu-container js-menu-container" id="mobile-menu"> -->
+			<div class="header-modal-menu js-menu-container" id="mobile-menu">
+				<button class="header-button-close js-close-menu">
+					<svg class="header-svg-close" width="8" height="8">
+						<use href="./images/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+
+				<!-- <button data-modal-close type="button" class="button-close">
+					<svg class="modal-card-icon" width="8" height="8">
+						<use href="./images/icons.svg#icon-close"></use>
+					</svg>
+				</button> -->
+
+				<!-- <ul class="mobile-menu">
+					<li><a href="" class="link">About</a></li>
+					<li><a href="" class="link">Products</a></li>
+					<li><a href="" class="link">Contacts</a></li>
+					<li><a href="" class="link">Career</a></li>
+				</ul> -->
 			</div>
 		</header>
 		<main>
@@ -431,7 +452,7 @@
 				<div class="footer-sub">
 					<h3 class="footer-h3">Subscribe</h3>
 					<form class="subscribe-form">
-						<label class="subscribe=label">
+						<label class="subscribe-label">
 							<input type="email" name="email" class="subscribe-input" placeholder="E-mail" />
 						</label>
 						<button type="submit" class="subscribe-submit"
@@ -444,6 +465,14 @@
 				</div>
 			</div>
 		</footer>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script defer src="js/mobile-menu.js"></script>
+
 		<script src="./js/modal.js"></script>
 	</body>
 </html>
