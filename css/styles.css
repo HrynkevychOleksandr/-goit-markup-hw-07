@@ -193,7 +193,7 @@ a {
 
 .header-modal-menu {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -215,6 +215,7 @@ a {
 .header-modal-menu .container {
 	display: flex;
 	flex-direction: column;
+	max-width: 428px;
 	/* position: relative; */
 
 	/* width: 396px; */
@@ -281,20 +282,18 @@ a {
 }
 .mobile-contacts {
 	margin-top: auto;
-	/* margin-top: 150px; */
 } 
 .mobile-cont-nav {
 	display: flex;
 	flex-direction: column;
 	row-gap: 40px;
-	margin-top: auto;
-	/* margin-top: 244px; */
 	margin-bottom: 28px;
 	font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+	/* color: var(--color-light-slate); */
 	color: var(--text-color-iris);
 }
 .mobile-cont-nav .mobile-item:last-child {
@@ -302,6 +301,9 @@ a {
 	line-height: 1.2;
 	color: var(--color-light-slate);
 }
+/* Якщо телефон синіє при ховері:
+ закоментувати стр. 296, розкоментувати 295, 305-308*/
+
 /* .mobile-cont-nav .link:hover,
 .mobile-cont-nav .link:focus {
 	color: var(--text-color-iris);
@@ -1170,6 +1172,9 @@ a {
 
 
 @media screen and (max-width: 767px) {
+	/* .footer (
+		width: 552px;
+	) */
 	.footer-logo > .logo {
 		justify-content: center;
 	}
@@ -1201,12 +1206,19 @@ a {
 		margin-bottom: 72px;
 	}
 }
-
+/* @media screen and (min-width: 768px) and (max-width: 1199px) {
+	.footer > .container {
+        width: 552px;
+	}
+} */
 @media screen and (min-width: 768px) {
 	.footer > .container {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: baseline;
+		width: 552px;
+		margin-left: auto;
+		margin-bottom: auto;
 	}
 	.footer-p {
 		width: 264px;
@@ -1225,11 +1237,14 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
+	.footer > .container {
+		width: 1200px;
+	}
 	.footer {
 		padding-top: 100px;
 		padding-bottom: 100px;
 	}
-			.footer-media {
+	.footer-media {
 		margin-left: 120px;
 	}
     .footer-sub {
